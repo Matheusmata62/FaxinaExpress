@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Faxina Express</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+         <div class="container header-container">
+            <a href="index.html" class="logo">Faxina Express</a>
+            <div class="user-area">
+                 <div class="logged-in-view">
+                    <a href="dashboard.html" class="user-profile-link">
+                        <i class="fas fa-user-circle"></i> Olá, <span id="user-name">Cliente</span>!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="booking-main">
+        <div class="container">
+            <h2>Agendar Nova Limpeza</h2>
+            <div class="booking-process">
+                <div class="booking-step">
+                    <h3>1. Escolha a data e frequência</h3>
+                    <p>Selecione o melhor dia e horário para sua limpeza.</p>
+                    <img src="https://placehold.co/600x300/f0f0f0/333?text=Calendário+Interativo+Aqui" alt="Calendário para agendamento" style="max-width:100%; border-radius: 8px; margin: 20px 0;">
+                    <select name="frequency">
+                        <option value="single">Serviço Único</option>
+                        <option value="weekly">Recorrente: Semanal</option>
+                        <option value="biweekly">Recorrente: Quinzenal</option>
+                        <option value="monthly">Recorrente: Mensal</option>
+                    </select>
+                </div>
+                
+                <div class="booking-step">
+                    <h3>2. Confirme o Endereço</h3>
+                    <div class="address-box">
+                        <p><strong>Meu Endereço Principal</strong></p>
+                        <p>Rua das Flores, 123, Apto 45</p>
+                        <p>Setor Bueno, Goiânia - GO</p>
+                    </div>
+                    <a href="#" class="add-new-address">Adicionar outro endereço</a>
+                </div>
+
+                <div class="booking-step">
+                    <h3>3. Resumo e Pagamento</h3>
+                    <div class="order-summary">
+                        <h4>Resumo do Pedido</h4>
+                        <p><strong>Plano:</strong> Express Conforto</p>
+                        <p><strong>Data:</strong> 28/09/2025 - 09:00h</p>
+                        <p><strong>Valor Total: R$ 180,00</strong></p>
+                    </div>
+                    <h4>Forma de Pagamento</h4>
+                    <div class="payment-options">
+                        <button class="payment-btn pix-btn"><i class="fas fa-qrcode"></i> Pagar com PIX</button>
+                        <button class="payment-btn card-btn"><i class="fas fa-credit-card"></i> Pagar com Cartão</button>
+                    </div>
+                </div>
+            </div>
+            <button class="submit-button main-booking-btn">Confirmar Agendamento</button>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta - Faxina Express</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Faxina Express</a>
+            <div class="user-area">
+                 <div class="logged-in-view">
+                    <a href="dashboard.html" class="user-profile-link">
+                        <i class="fas fa-user-circle"></i> Olá, <span id="user-name">Cliente</span>!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container dashboard-container">
+            <aside class="dashboard-sidebar">
+                <nav>
+                    <ul>
+                        <li class="active"><a href="#"><i class="fas fa-home"></i> Início</a></li>
+                        <li><a href="#"><i class="fas fa-calendar-check"></i> Próximas Faxinas</a></li>
+                        <li><a href="#"><i class="fas fa-history"></i> Faxinas Anteriores</a></li>
+                        <li><a href="#"><i class="fas fa-user-edit"></i> Meus Dados</a></li>
+                        <li><a href="#"><i class="fas fa-credit-card"></i> Pagamentos</a></li>
+                        <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <section class="dashboard-content">
+                <h1>Bem-vindo(a) de volta!</h1>
+                <p>Aqui você gerencia suas faxinas de forma simples e rápida.</p>
+
+                <div class="dashboard-card summary-card">
+                    <h3>Sua Próxima Limpeza</h3>
+                    <div class="next-cleaning-info">
+                        <p><strong>Plano:</strong> Express Conforto</p>
+                        <p><strong>Data:</strong> 28 de Setembro de 2025</p>
+                        <p><strong>Horário:</strong> 09:00h</p>
+                        <p><strong>Status:</strong> <span class="status confirmed">Confirmada</span></p>
+                    </div>
+                    <a href="agendamento.html" class="cta-button">Agendar Nova Limpeza</a>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Faxinas Anteriores</h3>
+                    <ul class="history-list">
+                        <li>
+                            <span>Plano Premium - 15/09/2025</span>
+                            <div class="actions">
+                                <a href="agendamento.html" class="repeat-order-btn">Repetir Pedido</a>
+                                <a href="#" class="evaluate-btn">Avaliar</a>
+                            </div>
+                        </li>
+                         <li>
+                            <span>Plano Light - 08/09/2025</span>
+                            <div class="actions">
+                                <a href="agendamento.html" class="repeat-order-btn">Repetir Pedido</a>
+                                <a href="#" class="evaluate-btn">Avaliar</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

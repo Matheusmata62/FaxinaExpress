@@ -1,0 +1,125 @@
+/* --- CONFIGURAÇÕES GERAIS E VARIÁVEIS --- */
+:root {
+    --primary-color: #E94057; /* Rosa vibrante */
+    --secondary-color: #F27121; /* Um toque de laranja para degradês */
+    --dark-color: #333;
+    --light-color: #fff;
+    --gray-bg: #f9f9f9;
+    --text-color: #555;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-family); color: var(--text-color); line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+h1, h2, h3 { color: var(--dark-color); margin-bottom: 20px; }
+h2 { text-align: center; font-size: 2.5rem; margin-bottom: 40px; }
+section { padding: 80px 0; }
+
+/* --- MENU FIXO --- */
+.main-header { background-color: var(--light-color); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; }
+.header-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); text-decoration: none; }
+.main-nav ul { list-style: none; display: flex; gap: 25px; }
+.main-nav a { text-decoration: none; color: var(--dark-color); font-weight: 600; transition: color 0.3s ease; }
+.main-nav a:hover { color: var(--primary-color); }
+
+/* --- ÁREA DE LOGIN E MODAL --- */
+.user-area .logged-out-view a { text-decoration: none; color: var(--text-color); margin-left: 15px; font-weight: 600; }
+.user-area .login-button { background-color: var(--primary-color); color: var(--light-color) !important; padding: 8px 15px; border-radius: 20px; transition: background-color 0.3s; }
+.user-area .login-button:hover { background-color: #d83048; }
+.user-profile-link { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--dark-color); font-weight: 600; }
+.user-profile-link i { font-size: 1.5rem; color: var(--primary-color); }
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); display: flex; align-items: center; justify-content: center; z-index: 2000; backdrop-filter: blur(5px); }
+.modal { background: var(--light-color); padding: 40px; border-radius: 10px; width: 90%; max-width: 450px; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+.modal .close-modal-btn { position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 2rem; cursor: pointer; color: #aaa; }
+.modal h2 { font-size: 1.8rem; margin-bottom: 25px; text-align: center; }
+.modal form { display: flex; flex-direction: column; gap: 15px; }
+.modal input { padding: 12px; border-radius: 5px; border: 1px solid #ddd; font-size: 1rem; }
+.modal hr { border: none; border-top: 1px solid #eee; margin: 10px 0; }
+.modal .forgot-password { text-align: right; font-size: 0.9rem; color: var(--primary-color); text-decoration: none; }
+.submit-button { padding: 15px; background-color: #c43349; color: var(--light-color); border: none; border-radius: 5px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background-color 0.3s; }
+.submit-button:hover { background-color: #d83048; }
+
+
+/* --- SEÇÕES DA PÁGINA INICIAL --- */
+.hero-section { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--light-color); background: url('https://placehold.co/1920x1080/cccccc/ffffff?text=Ambiente+Limpo') no-repeat center center/cover; padding-top: 80px; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); }
+.hero-content { position: relative; z-index: 2; }
+.hero-content h1 { font-size: 3.5rem; color: var(--light-color); margin-bottom: 20px; font-weight: 700; }
+.hero-content p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px auto; }
+.cta-button { background-color: var(--primary-color); color: var(--light-color); padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: transform 0.3s ease, box-shadow 0.3s ease; display: inline-block; }
+.cta-button:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(233, 64, 87, 0.4); }
+.plans-section { background-color: var(--gray-bg); }
+.plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.plan-card { background-color: var(--light-color); padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center; transition: transform 0.3s ease; }
+.plan-card:hover { transform: translateY(-10px); }
+.plan-icon { font-size: 3rem; color: var(--primary-color); margin-bottom: 20px; }
+.plan-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+.details-button { display: inline-block; margin-top: 20px; padding: 8px 20px; border: 2px solid var(--primary-color); color: var(--primary-color); border-radius: 50px; text-decoration: none; font-weight: 600; transition: background-color 0.3s, color 0.3s; }
+.details-button:hover { background-color: var(--primary-color); color: var(--light-color); }
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
+.feature-item { padding: 20px; }
+.feature-icon { font-size: 3rem; color: var(--primary-color); margin-bottom: 15px; }
+.feature-item h3 { font-size: 1.2rem; }
+.contact-section { background-color: #fff; }
+.contact-container { display: flex; align-items: center; gap: 50px; }
+.contact-image { flex: 1; text-align: center; }
+.contact-image img { max-width: 100%; width: 350px; height: 350px; border-radius: 50%; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.contact-text { flex: 1.5; }
+.contact-text h2 { font-size: 2.2rem; text-align: left; }
+.whatsapp-button { display: block; width: 100%; margin-top: 30px; padding: 20px; background: linear-gradient(45deg, #25D366, #128C7E); color: var(--light-color); text-align: center; font-size: 1.3rem; font-weight: 700; text-decoration: none; border-radius: 10px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.whatsapp-button i { margin-right: 10px; }
+.whatsapp-button:hover { transform: scale(1.03); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
+
+/* --- RODAPÉ --- */
+.main-footer { background-color: var(--dark-color); color: #ccc; padding-top: 40px; }
+.footer-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; padding-bottom: 40px; }
+.footer-info, .footer-social { flex: 1; min-width: 250px; }
+.footer-social a { color: var(--light-color); font-size: 1.8rem; margin-right: 15px; transition: color 0.3s ease; }
+.footer-social a:hover { color: var(--primary-color); }
+.footer-bottom { border-top: 1px solid #444; text-align: center; padding: 20px 0; font-size: 0.9rem; }
+
+/* --- ESTILOS PARA DASHBOARD E AGENDAMENTO --- */
+.dashboard-main, .booking-main { padding: 120px 20px 60px; background-color: #f4f5f7; min-height: 100vh; }
+.dashboard-container { display: flex; gap: 30px; align-items: flex-start; }
+.dashboard-sidebar { flex: 0 0 250px; background-color: var(--light-color); padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.dashboard-sidebar nav ul { list-style: none; }
+.dashboard-sidebar nav li a { display: flex; align-items: center; gap: 15px; padding: 12px 15px; text-decoration: none; color: var(--text-color); font-weight: 600; border-radius: 5px; transition: background-color 0.3s, color 0.3s; }
+.dashboard-sidebar nav li.active a, .dashboard-sidebar nav li a:hover { background-color: var(--primary-color); color: var(--light-color); }
+.dashboard-content { flex: 1; }
+.dashboard-card { background-color: var(--light-color); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; }
+.next-cleaning-info .status.confirmed { background-color: #d4edda; color: #155724; padding: 3px 8px; border-radius: 12px; font-weight: 600; display: inline-block; }
+.history-list { list-style: none; }
+.history-list li { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eee; }
+.history-list li:last-child { border-bottom: none; }
+.repeat-order-btn, .evaluate-btn { padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; text-decoration: none; }
+.repeat-order-btn { background-color: var(--primary-color); color: white; }
+.evaluate-btn { background-color: #eee; color: #333; }
+.booking-process .booking-step { background: var(--light-color); padding: 30px; margin-bottom: 25px; border-radius: 8px; }
+.booking-process select { width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ddd; font-size: 1rem; }
+.address-box { background-color: #f9f9f9; padding: 20px; border-radius: 5px; border: 1px solid #eee; }
+.add-new-address { display: inline-block; margin-top: 10px; font-weight: 600; color: var(--primary-color); }
+.order-summary { margin-bottom: 20px; }
+.payment-options { display: flex; gap: 15px; }
+.payment-btn { flex: 1; padding: 15px; border-radius: 5px; border: none; font-size: 1rem; font-weight: 600; cursor: pointer; }
+.pix-btn { background-color: #32BCAD; color: white; }
+.card-btn { background-color: #555; color: white; }
+.main-booking-btn { width: 100%; padding: 15px; font-size: 1.2rem; }
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+    .dashboard-container { flex-direction: column; }
+    .dashboard-sidebar { width: 100%; flex-basis: auto; }
+}
+
+@media (max-width: 768px) {
+    h2 { font-size: 2rem; }
+    .main-nav { display: none; } /* Simplificação para o exemplo. Idealmente, um menu hamburguer. */
+    .hero-content h1 { font-size: 2.5rem; }
+    .contact-container { flex-direction: column; text-align: center; }
+    .contact-text h2 { text-align: center; }
+    .contact-image img { width: 250px; height: 250px; }
+    .footer-container { flex-direction: column; text-align: center; }
+}
